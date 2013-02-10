@@ -1,0 +1,36 @@
+# Environment Variables
+# #####################
+
+export DEBEMAIL="zygmunt.krynicki@canonical.com"
+export DEBFULLNAME="Zygmunt Krynicki"
+
+export EDITOR=vim
+#export EMAIL="Zygmunt Krynicki <zygmunt.krynicki@linaro.org>"
+#export GIT_AUTHOR_NAME="Zygmunt Krynicki"
+#export GIT_AUTHOR_EMAIL="zygmunt.krynicki@linaro.org"
+#export GIT_COMMITER_NAME=$GIT_AUTHOR_NAME
+#export GIT_COMMITER_EMAIL=$GIT_AUTHOR_EMAIL
+export PIP_DOWNLOAD_CACHE=~/.cache/pip/downloads/
+
+# Magic from http://wiki.debian.org/UsingQuilt
+export QUILT_PATCHES=debian/patches
+export QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
+
+# TMP and TEMP are defined in the Windows environment.  Leaving
+# them set to the default Windows temporary directory can have
+# unexpected consequences.
+unset TMP
+unset TEMP
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# set PATH so that includes vagrant
+if [ -d /opt/vagrant/bin/ ]; then
+    PATH="$PATH:/opt/vagrant/bin"
+fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

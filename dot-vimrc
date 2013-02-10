@@ -1,0 +1,73 @@
+if v:progname =~? "evim"
+  finish
+endif
+set nocompatible
+
+call pathogen#infect()
+
+
+set dir=~/.cache/vim/
+set novb t_vb= novisualbell
+set backspace=indent,eol,start
+set autochdir
+set history=500
+set ruler
+set showcmd
+set incsearch
+set wim=longest,list
+set nowrap
+set title
+set ignorecase
+set smartcase
+set sw=4 ts=4 ht=4 smartindent
+set expandtab
+set formatoptions=tcqlron
+set cinoptions=:1,l1,t0,g0,(s
+set spell
+
+let g:netrw_dirhistmax=0
+let g:netrw_list_hide="^\\.[^.]"
+
+colorscheme twilight 
+
+" Get rid of mouse interactions
+" Works around https://bugzilla.gnome.org/show_bug.cgi?id=518405
+" In addition it disables midele mouse paste (that trivial to trigger when
+" scrolling on my netbook)
+" set mouse=a
+" map! <MiddleMouse> <Nop>
+" map! <MouseDown> <Nop>
+" map! <MouseUp> <Nop>
+
+filetype plugin indent on
+
+"if !exists("autocommands_loaded")
+"  let autocommands_loaded = 1
+  autocmd BufRead,BufNewFile,FileReadPost *.json set filetype=javascript
+  autocmd BufRead,BufNewFile,FileReadPost *.ino set filetype=arduino
+  "autocmd BufRead,BufNewFile,FileReadPost *.c source ~/.vim/c.vim
+  "autocmd BufRead,BufNewFile,FileReadPost *.h source ~/.vim/c.vim
+  "autocmd FileType makefile set noexpandtab
+  autocmd Filetype javascript set shiftwidth=2 tabstop=2 expandtab
+  autocmd Filetype css set shiftwidth=2 tabstop=2 expandtab
+  autocmd Filetype html set shiftwidth=2 tabstop=2 expandtab
+  autocmd Filetype xml set shiftwidth=2 tabstop=2 expandtab
+  autocmd Filetype xhtml set shiftwidth=2 tabstop=2 expandtab
+  autocmd Filetype htmldjango set shiftwidth=2 tabstop=2 expandtab
+  autocmd Filetype python set foldmethod=indent foldnestmax=2
+  "autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab nosmartindent autoindent 
+"endif
+
+" This beauty remembers where you were the last time you edited the file, and returns to the same position.
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+au BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal g`\"" |
+            \ endif
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
