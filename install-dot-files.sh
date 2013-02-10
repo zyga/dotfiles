@@ -2,7 +2,7 @@
 set -e
 
 # DotFiles need to be in this directory
-BASE_DIR="DotFiles"
+BASE_DIR=".dotfiles"
 # Don't die on filenames with spaces in them
 IFS=''
 
