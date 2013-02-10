@@ -15,7 +15,7 @@ for F in $HOME/$BASE_DIR/dot-*; do
     # Compute the real filename
     F="$(basename "$F" | sed 's/dot-//')"
     # Set aside local file with the same name _unless_ it is a symlink we want to create already
-    if [ -e "$HOME/.$F" ] && [ ! -h "$HOME/.$F" -o "$(readlink "$HOME/.$F")" != "$HOME/$BASE_DIR/dot-$F" ]; then
+    if [ -e "$HOME/.$F" -o -h "$HOME/.$F" ] && [ ! -h "$HOME/.$F" -o "$(readlink "$HOME/.$F")" != "$HOME/$BASE_DIR/dot-$F" ]; then
         mv -v "$HOME/.$F" "$HOME/.$F.local"
     fi
     # Create a symlink to the dotfile
@@ -39,7 +39,7 @@ for D in $HOME/$BASE_DIR/dirdot-*; do
     # Symlink each dotfile from the dotdirectory
     for F in $HOME/$BASE_DIR/dirdot-$D/*; do
         F="$(basename "$F")"
-        if [ -e "$HOME/.$D/$F" ] && [ ! -h "$HOME/.$D/$F" -o "$(readlink "$HOME/.$D/$F")" != "$HOME/$BASE_DIR/dirdot-$D/$F" ] ; then
+        if [ -e "$HOME/.$D/$F" -o -h "$HOME/.$D/$F" ] && [ ! -h "$HOME/.$D/$F" -o "$(readlink "$HOME/.$D/$F")" != "$HOME/$BASE_DIR/dirdot-$D/$F" ] ; then
         mv -v "$HOME/.$D/$F" "$HOME/.$D/$F.local"
         fi
         if [ ! -e "$HOME/.$D/$F" ]; then
