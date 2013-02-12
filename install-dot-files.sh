@@ -47,3 +47,6 @@ for D in $HOME/$BASE_DIR/dirdot-*; do
         fi
     done
 done
+
+# Create vim cache directory
+mkdir -p $HOME/.cache/vim
