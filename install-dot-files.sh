@@ -50,3 +50,7 @@ done
 
 # Create vim cache directory
 mkdir -p $HOME/.cache/vim
+
+# Ensure that all submodules are installed
+git submodule init
+git submodule update
