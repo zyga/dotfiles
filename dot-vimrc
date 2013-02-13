@@ -28,7 +28,7 @@ set spell
 let g:netrw_dirhistmax=0
 let g:netrw_list_hide="^\\.[^.]"
 
-colorscheme twilight 
+colorscheme asu1dark
 
 " Get rid of mouse interactions
 " Works around https://bugzilla.gnome.org/show_bug.cgi?id=518405
