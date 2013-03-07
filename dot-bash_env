@@ -34,3 +34,10 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Setup vagrant apt cache
+case $(hostname) in
+    fx|tarmac-lander|vaiop)
+    export VAGRANT_APT_CACHE=http://192.168.0.193:3142
+    ;;
+esac
