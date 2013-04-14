@@ -67,7 +67,7 @@ filetype plugin indent on
   autocmd Filetype xhtml set shiftwidth=2 tabstop=2 expandtab
   autocmd Filetype htmldjango set shiftwidth=2 tabstop=2 expandtab
   autocmd Filetype python set foldmethod=indent foldnestmax=2
-  "autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab nosmartindent autoindent 
+  "autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab nosmartindent autoindent
 "endif
 
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
