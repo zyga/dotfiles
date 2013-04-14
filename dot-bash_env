@@ -32,6 +32,9 @@ if [ -d /opt/vagrant/bin/ ]; then
     PATH="$PATH:/opt/vagrant/bin"
 fi
 
+# Set GOPATH
+export GOPATH=$HOME/.local
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
