@@ -131,3 +131,6 @@ COMP_CONFIGURE_HINTS=1
 
 # Define to avoid flattening internal contents of tar files 
 COMP_TAR_INTERNAL_PATHS=1
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
