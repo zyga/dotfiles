@@ -40,7 +40,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Setup vagrant apt cache
 case $(hostname) in
-    fx|tarmac-lander|vaiop|g580)
-    export VAGRANT_APT_CACHE=http://192.168.0.8:3142
+    fx|tarmac-lander|vaiop|g580|hackbox)
+    export VAGRANT_APT_CACHE=http://192.168.0.3:3142
     ;;
 esac
+export apt_cache=$VAGRANT_APT_CACHE
