@@ -1,6 +1,9 @@
 Host *
     HashKnownHosts no
 
+Host ap*
+    user root
+
 # AWS stuff
 Host *.compute.amazonaws.com
     User ubuntu
