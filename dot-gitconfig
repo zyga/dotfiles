@@ -4,3 +4,10 @@
 [gui]
 	fontui = -family \"Droid Sans\" -size -12 -weight normal -slant roman -underline 0 -overstrike 0
 	spellingdictionary = en_US
+[color]
+	ui = auto
+	diff = auto
+[alias]
+    record = add -p
+    lp-outgoing = log launchpad/+upstream..HEAD --reverse --oneline
+
