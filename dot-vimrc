@@ -9,11 +9,11 @@ if hour >= 0 && hour <= 5
 elseif hour > 5 && hour <= 12
     colorscheme morning
 elseif hour > 12 && hour <= 17
-    colorscheme zenburn
+    colorscheme morning
 elseif hour > 17 && hour <= 20
-    colorscheme evening
+    colorscheme calmar256_dark
 elseif hour > 20 && hour <= 24
-    colorscheme twilight
+    colorscheme calmar256_dark
 endif
 
 call pathogen#infect()
