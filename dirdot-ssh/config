@@ -16,3 +16,6 @@ Host pi
 # AWS stuff
 Host *.compute.amazonaws.com
     User ubuntu
+
+Host *.debian.org
+    User zyga-guest
