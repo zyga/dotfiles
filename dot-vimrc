@@ -57,6 +57,7 @@ filetype plugin indent on
 "  let autocommands_loaded = 1
   autocmd BufRead,BufNewFile,FileReadPost *.json set filetype=javascript
   autocmd BufRead,BufNewFile,FileReadPost *.ino set filetype=arduino
+  autocmd BufRead,BufNewFile,FileReadPost *.txt set syntax=pbjobdef
   "autocmd BufRead,BufNewFile,FileReadPost *.c source ~/.vim/c.vim
   "autocmd BufRead,BufNewFile,FileReadPost *.h source ~/.vim/c.vim
   "autocmd FileType makefile set noexpandtab
