@@ -8,6 +8,8 @@
 	ui = auto
 	diff = auto
 [alias]
-    record = add -p
-    lp-outgoing = log launchpad/+upstream..HEAD --reverse --oneline
-
+	record = add -p
+	lp-outgoing = log launchpad/+upstream..HEAD --reverse --oneline
+    send-checkbox-patches = send-email --to=checkbox-dev@lists.launchpad.net launchpad/+upstream..HEAD
+[push]
+	default = simple
