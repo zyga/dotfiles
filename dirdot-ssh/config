@@ -1,8 +1,17 @@
 Host *
     HashKnownHosts no
 
-Host ap*
+Host ap1
+    Hostname ap1.lan
     user root
+
+Host ap2
+    Hostname ap2.lan
+    user root
+
+Host pi
+    Hostname pi.lan
+    user pi
 
 # AWS stuff
 Host *.compute.amazonaws.com
