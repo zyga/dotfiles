@@ -37,6 +37,7 @@ set expandtab
 set formatoptions=tcqlron
 set cinoptions=:1,l1,t0,g0,(s
 set spell
+set t_Co=256
 
 let g:netrw_dirhistmax=0
 let g:netrw_list_hide="^\\.[^.]"
